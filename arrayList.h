@@ -18,6 +18,7 @@ template <typename T> class arrayList{
         }
         bool isFull(){ //Using dynamic memory but still added this funciton
             cout<<"Using dynamic memory so array is always \"full\" but size is size is currently: "<<size<<endl;
+            return true;
         }
         int listSize(){ //return size
             return size;
@@ -53,6 +54,7 @@ template <typename T> class arrayList{
             delete list;
             list = temp;
             size++;
+	    return true;
         }
         T retreiveAt(int pos){ //Returns val at pos if it is in bounds
             if(pos<size&&pos>=0){
@@ -62,6 +64,7 @@ template <typename T> class arrayList{
                 cout<<"Error, pos out of bounds\nExiting now"<<endl;
                 exit(1);
             }
+	    return false;
         }
         void clearList(){ //deletes list values and sets size = 0 to support new append operations
             delete[] list;
