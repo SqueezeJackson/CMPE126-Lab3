@@ -98,4 +98,7 @@ template <typename T> class arrayList{
             }
             return false;
         }
+        ~arrayList(){
+            delete[] list;
+        }
 };
